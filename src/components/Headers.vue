@@ -1,30 +1,44 @@
 <template>
-  <div id="app">
-    <header class="navbar">
-      <div class="logo">HyeoungSeok | Portfolio</div>
-      <nav>
-        <ul>
-          <li><router-link to="/about-me">ABOUT ME</router-link></li>
-          <li><router-link to="/education">EDUCATION</router-link></li>
-          <li><router-link to="/skill">SKILL</router-link></li>
-          <li><router-link to="/project">PROJECT</router-link></li>
-          <li><router-link to="/contact">CONTACT</router-link></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+  <header class="navbar">
+    <div class="logo">HyeoungSeok | Portfolio</div>
+    <button class="nav-toggle" @click="toggleNav">☰</button> <!-- 햄버거 메뉴 버튼 -->
+    <nav :class="{ 'active': isNavOpen }">
+      <ul>
+        <li><a @click="scrollToSection('Intro')">INTRO</a></li>
+        <li><a @click="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a @click="scrollToSection('skill')">SKILL</a></li>
+        <li><a @click="scrollToSection('project')">PROJECT</a></li>
+        <li><a @click="scrollToSection('contact')">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script setup>
-// 별도의 스크립트 설정이 필요 없으므로 빈 상태로 둡니다.
+import { ref } from 'vue';
+
+const isNavOpen = ref(false);
+
+function toggleNav() {
+  isNavOpen.value = !isNavOpen.value;
+}
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    isNavOpen.value = false; // 링크 클릭 시 네비게이션 닫기
+  }
+}
 </script>
 
 <style scoped>
-/* 기본 스타일링 */
+/* 공통 스타일 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* 헤더 스타일 */
@@ -32,72 +46,94 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  background-color: #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 130px;
+  position: relative;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* 햄버거 메뉴 버튼 스타일 */
+.nav-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* 네비게이션 스타일 */
+nav {
+  display: flex;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
+  gap: 25px;
 }
 
 nav ul li {
-  margin-left: 20px;
+  list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
-}
-
-.cta-button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #218838;
-}
-
-/* 메인 섹션 스타일 */
-.hero-section {
-  height: 100vh;
-  background-image: url('/path_to_your_image_here.jpg'); /* 이미지 경로 수정 */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-content {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
   font-size: 18px;
-  margin-bottom: 20px;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #218838;
+  color: white;
+  box-shadow: 0 4px 15px rgba(33, 136, 56, 0.3);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* 햄버거 메뉴 버튼 표시 */
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid #444;
+  }
+
+  nav.active {
+    display: flex; /* 햄버거 메뉴가 열리면 표시 */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 15px;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
 }
 </style>

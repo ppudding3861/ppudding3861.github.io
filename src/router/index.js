@@ -1,27 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import AboutMe from '@/components/aboutMe.vue';
-import Education from '@/components/education.vue';
 import Skill from '@/components/skill.vue';
 import Project from '@/components/project.vue';
 import Contact from '@/components/contact.vue';
+import Intro from '@/components/Intro.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'Home',
-      redirect: "/about-me",
+      redirect: '/intro', // '/' 경로를 '/intro'로 리다이렉트
+    },
+    {
+      path: '/intro',
+      name: 'Intro',
+      component: Intro,
     },
     {
       path: '/about-me',
       name: 'AboutMe',
       component: AboutMe,
-    },
-    {
-      path: '/education',
-      name: 'Education',
-      component: Education,
     },
     {
       path: '/skill',
@@ -38,7 +37,14 @@ const router = createRouter({
       name: 'Contact',
       component: Contact,
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  }
 });
 
 export default router;

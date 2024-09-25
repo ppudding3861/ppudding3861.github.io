@@ -66,7 +66,7 @@ const props = defineProps({
 /* 반응형 스타일 추가 */
 @media (max-width: 768px) {
   .my-story {
-    padding: 180px 15px;
+    padding: 150px 15px;
     height: 85vh; /* 모바일에서도 전체 화면 채우기 */
     overflow-y: auto; /* 스크롤 가능 */
   }
@@ -89,7 +89,7 @@ const props = defineProps({
 
 @media (max-width: 480px) {
   .my-story {
-    padding: 180px 10px;
+    padding: 120px 10px;
     height: 85vh; /* 작은 화면에서도 스크롤 */
     overflow-y: auto; /* 스크롤 가능 */
   }

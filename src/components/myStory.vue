@@ -25,6 +25,8 @@ const props = defineProps({
   color: #fff;
   padding: 180px 20px;
   text-align: center;
+  height: 85vh; /* 전체 화면을 채움 */
+  overflow-y: auto; /* 스크롤 적용 */
 }
 
 .container {
@@ -59,5 +61,53 @@ const props = defineProps({
 
 .close-button:hover {
   background-color: #555;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 768px) {
+  .my-story {
+    padding: 180px 15px;
+    height: 85vh; /* 모바일에서도 전체 화면 채우기 */
+    overflow-y: auto; /* 스크롤 가능 */
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .story-text {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .close-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-story {
+    padding: 180px 10px;
+    height: 85vh; /* 작은 화면에서도 스크롤 */
+    overflow-y: auto; /* 스크롤 가능 */
+  }
+
+  .title {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
+
+  .story-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .close-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
 </style>

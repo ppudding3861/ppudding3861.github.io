@@ -27,8 +27,8 @@ const toggleSlider = () => {
 .slider {
   position: fixed;
   top: 0;
-  right: -50%; /* 처음에는 화면 밖에 위치 */
-  width: 50%; /* 슬라이드가 화면의 절반까지만 차지 */
+  right: -70%; /* 처음에는 화면 밖에 위치 */
+  width: 70%; /* 슬라이드가 화면의 절반까지만 차지 */
   height: 100%;
   background-color: #f9f9f9;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);

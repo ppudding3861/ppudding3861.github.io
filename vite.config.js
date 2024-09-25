@@ -19,6 +19,10 @@ export default defineConfig({
   build: {
     outDir:"docs", // 빌드 결과물을 docs 폴더에 저장
   },
+  server: {
+    port: 8000,
+    https: false,
+  },
   define: {
     'global': 'window', // 브라우저 환경에서 global을 window로 정의
   },

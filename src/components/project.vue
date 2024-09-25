@@ -30,18 +30,18 @@ const projects = [
     title: 'Leafresh',
     description: 'Leafresh 프로젝트는 식물 애호가들을 위한 플랫폼으로, 식물을 키우는 사람들 간의 지식 공유와 자신이 키운 식물을 판매할 수 있는 기능을 제공합니다. 사용자들은 자신이 키운 식물의 상태나 경험을 공유하고, 다른 사용자들의 조언을 받을 수 있으며, 키운 식물을 판매하거나 구매할 수 있는 온라인 마켓플레이스도 제공합니다.',
     image: proj1Image,
-    techStack: ['Vue.js', 'JavaScript', 'CSS'],
-    websiteUrl: 'https://leafresh.com',
-    githubUrl: 'https://github.com/username/leafresh',
+    techStack: ['Vue.js', 'JavaScript', 'TemurinJDK-17','CSS','flutter','SpringBoot','MySql','Docker','jenkins','Vercel'],
+    websiteUrl: 'https://leafresh-frontend-nine.vercel.app',
+    githubUrl: 'https://github.com/Leafresh-2024',
   },
   {
     id: 2,
     title: 'Flux',
     description: '최신 웹 기술을 활용하여 온라인 경매 웹 애플리케이션을 개발하는 것을 목표로 합니다. 사용자가 직접 만든 상품을 직관적이고 원활하게 경매로 판매하고 참여할 수 있는 웹 애플리케이션을 제공하는 것입니다.',
     image: proj2Image,
-    techStack: ['React', 'Node.js', 'Express'],
-    websiteUrl: 'https://flux-auction.com',
-    githubUrl: 'https://github.com/username/flux',
+    techStack: ['Vue.js', 'JavaScript', 'TemurinJDK-17','CSS','SpringBoot','MySql','Docker','jenkins','Vercel'],
+    websiteUrl: 'https://flux-front-server.vercel.app',
+    githubUrl: 'https://github.com/Flux2024',
   },
 ];
 </script>
@@ -127,6 +127,7 @@ p {
 
 .tech-stack {
   display: flex;
+  flex-wrap: wrap; /* 줄바꿈을 위해 wrap 추가 */
   gap: 10px;
 }
 
@@ -135,8 +136,9 @@ p {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 
 .links {
   margin-top: 15px;

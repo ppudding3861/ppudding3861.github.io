@@ -23,32 +23,45 @@
 </template>
 
 <script setup>
+import JPA from '@/asset/icon/jpa.png';
+import Docker from '@/asset/icon/docker.png';
+import Git from '@/asset/icon/Git-logo.png';
+import Github from '@/asset/icon/github.png';
+import Html from '@/asset/icon/html.png';
+import Java from '@/asset/icon/java.png';
+import Jenkins from '@/asset/icon/jenkins.png';
+import JavaScript from '@/asset/icon/js.png';
+import MySQL from '@/asset/icon/mysql.png';
+import Spring from '@/asset/icon/spring-icon.png';
+import Vue from '@/asset/icon/vue.png';
+import Css from '@/asset/icon/css3.png';
+
 const categories = [
   {
-    name: 'LANGUAGE',
+    name: 'BackEnd Part',
     stacks: [
-      { name: 'CSS3', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg', description: 'CSS3는 웹 페이지의 스타일을 지정하는 데 사용됩니다.' },
-      { name: 'HTML5', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg', description: 'HTML5는 웹 페이지 구조를 정의하는 표준입니다.' },
-      { name: 'TemurinJDK 17', icon: 'https://adoptium.net/icons/icon-384x384.png', description: 'Temurin JDK 17은 자바 개발을 위한 오픈 소스 JDK입니다.' },
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', description: 'JavaScript는 웹 페이지에 동적 기능을 추가합니다.' },
-      { name: 'Dart', icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png', description: 'Dart는 Google에서 만든 프로그래밍 언어로, 주로 Flutter에서 사용됩니다.' },
+      { name: 'Java', icon: Java, description: 'Java는 플랫폼에 독립적인 객체 지향 프로그래밍 언어입니다.' },
+      { name: 'Spring', icon: Spring, description: 'Spring은 자바 기반의 애플리케이션 개발을 위한 프레임워크입니다.' },
+      { name: 'MySQL', icon: MySQL, description: 'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템입니다.' },
+      { name: 'JPA', icon: JPA, description: 'JPA는 자바 객체와 관계형 데이터베이스 간의 데이터를 매핑하는 표준 인터페이스입니다.' },
     ]
   },
   {
-    name: 'BACK-END PART',
+    name: 'FrontEnd Part',
     stacks: [
-      { name: 'Spring', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg', description: 'Spring은 자바 기반의 엔터프라이즈 애플리케이션 개발을 위한 프레임워크입니다.' },
-      { name: 'Spring Boot', icon: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg', description: 'Spring Boot는 빠르고 간편한 자바 애플리케이션 개발을 위한 도구입니다.' },
-      { name: 'Node.js', icon: 'https://nodejs.org/static/images/logo.svg', description: 'Node.js는 서버 측에서 JavaScript를 실행할 수 있게 해주는 런타임 환경입니다.' },
-      { name: 'JSON Web Token', icon: 'https://jwt.io/img/pic_logo.svg', description: 'JWT는 JSON 포맷을 사용한 웹 토큰 인증 방식입니다.' },
+      { name: 'HTML', icon: Html, description: 'HTML5는 웹 페이지의 구조를 정의하는 표준 언어입니다.' },
+      { name: 'CSS', icon: Css, description: 'CSS3는 웹 페이지의 스타일을 지정하는 언어입니다.' },
+      { name: 'JavaScript', icon: JavaScript, description: 'JavaScript는 웹 페이지에 동적 기능을 추가하는 스크립팅 언어입니다.' },
+      { name: 'Vue.js', icon: Vue, description: 'Vue.js는 사용자 인터페이스 개발을 위한 프론트엔드 프레임워크입니다.' },
     ]
   },
   {
-    name: 'FRONT-END PART',
+    name: 'DevOps Part',
     stacks: [
-      { name: 'Vue.js', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg', description: 'Vue.js는 사용자 인터페이스 개발을 위한 프론트엔드 프레임워크입니다.' },
-      { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', description: 'React는 사용자 인터페이스를 구축하기 위한 라이브러리입니다.' },
-      { name: 'Axios', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Axios_logo_%282021%29.png', description: 'Axios는 HTTP 요청을 쉽게 처리하기 위한 자바스크립트 라이브러리입니다.' },
+      { name: 'Docker', icon: Docker, description: 'Docker는 컨테이너 기반의 가상화 플랫폼으로, 애플리케이션을 패키징하고 배포하는 데 사용됩니다.' },
+      { name: 'Jenkins', icon: Jenkins, description: 'Jenkins는 지속적인 통합과 배포(CI/CD)를 위한 자동화 도구입니다.' },
+      { name: 'Git', icon: Git, description: 'Git은 버전 관리를 위한 분산형 시스템으로, 소스 코드 관리를 효율적으로 할 수 있습니다.' },
+      { name: 'GitHub', icon: Github, description: 'GitHub는 Git 저장소를 호스팅하는 서비스로, 협업을 지원하는 플랫폼입니다.' },
     ]
   },
 ];

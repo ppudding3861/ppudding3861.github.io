@@ -13,7 +13,7 @@
       </div>
 
       <div class="social-links">
-        <h2>Find me on</h2>
+        <h2>Find me</h2>
         <a href="https://github.com/ppudding3861" target="_blank" class="social-button">GitHub</a>
         <a href="https://velog.io/@ppuding/posts" target="_blank" class="social-button">Blog</a>
       </div>
@@ -72,7 +72,7 @@ p {
 
 .social-links a {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 10px 10px;
   padding: 15px 30px;
   font-size: 24px;
   background-color: #218838;

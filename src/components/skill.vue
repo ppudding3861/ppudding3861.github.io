@@ -226,8 +226,8 @@ const categories = [
   }
 
   .stack_container ul li:hover {
-    width: 180px;
-    height: 120px;
+    width: 220px;
+    height: 160px;
   }
 }
 
@@ -256,8 +256,8 @@ const categories = [
   }
 
   .stack_container ul li:hover {
-    width: 150px;
-    height: 110px;
+    width: 200px;
+    height: 140px;
   }
 }
 </style>

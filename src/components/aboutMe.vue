@@ -2,7 +2,7 @@
   <section class="about-me-section">
     <div class="about-me-allcontainer">
       <div class="left-container">
-        <img src="@/asset/image/all.jpg" alt="Background Image" class="container-image"/>
+        <img src="@/asset/image/all.jpg" alt="Background Image" class="container-image" />
       </div>
       <div class="right-container">
         <div class="about-me-container">
@@ -17,7 +17,8 @@
               다양한 경험을 통해 유연한 사고를 기르고, 빠른 판단력과 추진력으로 문제를 해결하는 능력을 갖추었습니다. 사용자 경험을 최우선으로 생각하며, 앞으로도 더 나은 결과를 위해 끊임없이 성장하고 배우고자 합니다.
             </p>
             <div class="social-links">
-              <a href="https://github.com/ppudding3861" target="_blank" class="social-button">GitHub</a>
+              <!-- props로 전달받은 함수를 버튼 클릭 시 호출 -->
+              <a href="javascript:void(0);" @click="$emit('toggle-slider')" class="social-button">자세히 보기</a>
             </div>
           </div>
         </div>
@@ -26,7 +27,12 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  // 부모 컴포넌트에서 받은 toggleSlider 함수를 정의
+  toggleSlider: Function
+});
+</script>
 
 <style scoped>
 .about-me-section {
@@ -88,7 +94,7 @@ h1 {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 15px;
-  color:rgb(156, 107, 212);
+  color: rgb(156, 107, 212);
 }
 
 p {
@@ -99,8 +105,7 @@ p {
 }
 
 .social-links {
-  display: flex;
-  gap: 15px;
+  margin-top: 20px; /* 글 밑에 간격을 추가 */
 }
 
 .social-button {

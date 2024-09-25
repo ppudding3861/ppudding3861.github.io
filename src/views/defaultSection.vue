@@ -1,6 +1,6 @@
 <script setup="setup">
     import Headers from "@/components/Headers.vue";
-    import AboutMe from "@/components/aboutMe.vue";
+    import AboutMe from "@/components/aboutMeSection.vue";
     import Skill from "@/components/skill.vue";
     import Project from "@/components/project.vue";
     import Contact from "@/components/contact.vue";

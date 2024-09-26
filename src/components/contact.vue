@@ -9,7 +9,7 @@
 
       <div class="email">
         <h2>Email</h2>
-        <a href="mailto:email@example.com">email@example.com</a>
+        <a href="mailto:email@example.com">acdongedb@hanmail.net</a>
       </div>
 
       <div class="social-links">

@@ -10,7 +10,7 @@
           <div class="about-me-content">
             <h1>A Fresh Start<br>for New Possibilities.</h1>
             <p>
-              안녕하세요. 백엔드 개발자를 꿈꾸는 강형석입니다.
+              안녕하세요. 개발자를 꿈꾸는 강형석입니다.
               <br/><br/>
               “유연함과 추진력: 변화에 빠르게 적응하고, 목표를 향해 끊임없이 나아간다.”
               <br/><br/>

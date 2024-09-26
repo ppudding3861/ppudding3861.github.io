@@ -28,7 +28,7 @@ const projects = [
   {
     id: 1,
     title: 'Leafresh',
-    description: 'Leafresh 프로젝트는 식물 애호가들을 위한 플랫폼으로, 식물을 키우는 사람들 간의 지식 공유와 자신이 키운 식물을 판매할 수 있는 기능을 제공합니다. 사용자들은 자신이 키운 식물의 상태나 경험을 공유하고, 다른 사용자들의 조언을 받을 수 있으며, 키운 식물을 판매하거나 구매할 수 있는 온라인 마켓플레이스도 제공합니다.',
+    description: 'Leafresh 프로젝트는 식물 애호가들이 지식을 공유하고, 자신이 키운 식물을 판매하거나 구매할 수 있는 플랫폼입니다. 사용자들은 식물 상태와 경험을 공유하며, 온라인 마켓플레이스를 통해 거래할 수 있습니다.',
     image: proj2Image,
     techStack: ['Vue.js', 'JavaScript', 'TemurinJDK-17','CSS','flutter','SpringBoot','MySql','Docker','jenkins','Vercel'],
     websiteUrl: 'https://leafresh-frontend-nine.vercel.app',

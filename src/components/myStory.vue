@@ -1,13 +1,14 @@
 <template>
   <section class="my-story">
     <div class="container">
-      <h1 class="title">MY STORY</h1>
-      <p class="story-text">
-        저는 자신에게 맞는 일을 찾는 과정에서 여러 도전을 해보았고, 그 과정에서 개발의 길을 선택하게 되었습니다. <br>온라인 플랫폼을 통해 다양한 판매와 운영을 경험하며, 백엔드 시스템의 중요성을 인식하게 되었고, 사용자 경험을 최적화하고 문제를 해결하는 방법을 깊이 있게 배워가게 되었습니다.<br> 이를 통해 저만의 기술적 자산을 쌓으며 지속적인 성장을 목표로 나아가고 있습니다.
-      </p>
-      <p class="story-text">
-        하이미디어 학원에서 다양한 프로젝트에서 설계, API 개발, 서버 구축 등 다양한 기술적 문제를 해결하고 유연한 사고와 추진력을 발휘해 빠르게 변화하는 환경 속에서도 최적의 결과를 내기 위해 끊임없이 학습하고 도전하고 있습니다.<br>앞으로도 새로운 기술에 대한 탐구와 백엔드 개발의 역량 강화를 통해 성장해나가고자 합니다.
-      </p>
+      <h1 class="title">자기 소개</h1>
+      <ul class="story-text">
+        <li>안녕하세요. <strong>백엔드 개발자 강형석</strong>입니다.</li>
+        <li>자영업 경험을 통해 얻은 <strong>비즈니스적 사고방식</strong>과 방송국 조연출 업무를 통해 익힌 <strong>연출 및 편집 능력</strong>은 프로젝트 개발에 큰 이점을 제공할 것입니다.</li>
+        <li><strong>디자인과 영상편집 툴</strong>을 다룰 수 있어, <strong>시각적 커뮤니케이션 능력</strong>을 겸비한 개발자로서 창의적인 솔루션을 제시할 수 있습니다.</li>
+        <li>다양한 <strong>경험과 도전을 통해 성장</strong>해왔으며, <strong>끊임없이 변화하는 기술과 새로운 도전 기회</strong>가 넘치는 프로그래밍의 매력에 빠져 개발자의 길을 걷고 있습니다.</li>
+        <li><strong>원활한 소통</strong>을 즐기며 <strong>팀워크를 최우선 가치</strong>로 여기고, <strong>비즈니스적 사고와 창의적 사고</strong>를 결합하여 성공적인 프로젝트를 이끌 자신이 있습니다.</li>
+      </ul>
       <button class="close-button" @click="toggleSlider">닫기</button>
     </div>
   </section>
@@ -43,9 +44,16 @@ const props = defineProps({
 }
 
 .story-text {
+  text-align: left; /* 왼쪽 정렬 */
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
+  list-style-type: disc; /* 리스트 형식 */
+  padding-left: 20px; /* 리스트 안쪽 여백 */
+}
+
+.story-text li {
+  margin-bottom: 15px; /* 리스트 아이템 간 간격 */
 }
 
 .close-button {
@@ -81,6 +89,10 @@ const props = defineProps({
     line-height: 1.6;
   }
 
+  .story-text li {
+    margin-bottom: 10px;
+  }
+
   .close-button {
     padding: 8px 16px;
     font-size: 14px;
@@ -103,6 +115,10 @@ const props = defineProps({
     font-size: 0.8rem;
     margin-bottom: 20px;
     line-height: 1.5;
+  }
+
+  .story-text li {
+    margin-bottom: 8px;
   }
 
   .close-button {
